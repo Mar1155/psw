@@ -2,7 +2,7 @@ DROP SCHEMA orders;
 CREATE SCHEMA orders;
 USE orders;
 
-CREATE TABLE user (
+CREATE TABLE User (
 	id INTEGER AUTO_INCREMENT PRIMARY KEY,
 	code VARCHAR(70),
 	first_name VARCHAR(50),

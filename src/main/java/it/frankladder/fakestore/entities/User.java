@@ -1,6 +1,5 @@
 package it.frankladder.fakestore.entities;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -9,13 +8,12 @@ import lombok.ToString;
 import javax.persistence.*;
 import java.util.List;
 
-
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
 @Entity
-@Table(name = "user", schema = "orders")
+@Table(name = "User", schema = "orders")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,6 +47,5 @@ public class User {
     @OneToMany(mappedBy = "buyer", cascade = CascadeType.MERGE)
     @JsonIgnore
     private List<Purchase> purchases;
-
 
 }
